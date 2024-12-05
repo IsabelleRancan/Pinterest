@@ -1,11 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pinterest - Perfil</title>
-</head>
+{% extends "homepage.html" %}
+
+{% block titulo %} 
+    Perfil - {{ usuario }}
+{% endblock %}
+
+{% block body %}
 <body>
-    <h1>Perfil</h1>
+    <h1>Perfil do usuário: {{ usuario }}</h1>
+
+        <a href="{{url_for('homepage')}}">Sair</a> <!--sempre aspas duplas do lado de fora e aspas simples do lado de dentro-->
+    <!--<a href="/">Sair</a> -> se o link for externo, tem que passar o HTTP antes do link, o link que passamos indica o link da homepage-->
 </body>
-</html>
+{% endblock %}
