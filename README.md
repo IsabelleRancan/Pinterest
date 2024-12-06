@@ -55,3 +55,11 @@ AULA 09:
     6 - Criando uma função que vai encontrar o usuário pelo seu id usando a importação UserMixin e o decorador @login_manager no arquivos models 
     7 - Criar o banco de dados novamente utilizando o arquivo 'criar_banco' 
     8 - Mexendo no arquivo routes para impedir que qualquer pessoa possa acessar o página de perfil utilizando a importação e o decorador @login_required 
+
+AULA 10:
+    -> Criando os formulários de login 
+    1 - Instalando mais algumas dependencias do Flask: pip install flask-wtf, pip install email_validator;
+    2 - Fazer a importação das dependencias instaladas no arquivo 'forms.py';
+    3 - Criação das classes de 'acessar conta' e 'criar conta':
+        inserimos os campos com os seus tipos correspondentes e inserimos seus validaroes que já haviam sido importados no arquivo 
+    4 - Fazemos uma validação para que apenas uma conta possa ser criada por email 

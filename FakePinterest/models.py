@@ -2,7 +2,7 @@
 
 from FakePinterest import database, login_manager
 from datetime import datetime
-from flask_login import UserMixin 
+from flask_login import UserMixin
 
 @login_manager.user_loader #decorativo que está dizendo que é a função que carrega o usuário
 def load_usuario(id_usuario): #essa função vai perminit encontrar o usuário 
