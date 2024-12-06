@@ -34,7 +34,8 @@ AULA 7:
 
 AULA 08:
     -> Criação do Banco de Dados
-    1 - Baixamos o SQLAlchemy no nosso ambiente virtual 
+    1 - Baixamos o SQLAlchemy no nosso ambiente virtual: pip install sqlalchemy, pip install flask-sqlalchemy
+
     2 - Adicionamosb algumas coisas no nosso arquivo de init:
         from flask_sqlalchemy import SQLAlchemy - importamos o alchemy
         app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db" - comando utilizado para criar o banco de dados, nesse caso vai ser em SQLLite e o nome do arquivo é 'comunidade.bd'
@@ -43,3 +44,14 @@ AULA 08:
     4 - A pasta 'instance' foi criada, é dentro dela que está o nosso bd
     5 - Vamos criar as nossas tabelas dentro do arquivo 'models'
     6 - Importamos as tabelas no 'criar_banco', apagamos o banco vazio e executamos o arquivo 'criar' de novo 
+
+AULA 09:
+    -> Implementando um sistema de login e segurança
+    1 - instalando flask-login flask-bcrypt
+    2 - fazendo as importação necessárias no arquivo init 
+    3 - criando o arquivo chave aleatória e passando para o arquivo init 
+    4 - Fazendo a importação de usermixin no arquivo models
+    5 - Apagar o banco de dados novamente 
+    6 - Criando uma função que vai encontrar o usuário pelo seu id usando a importação UserMixin e o decorador @login_manager no arquivos models 
+    7 - Criar o banco de dados novamente utilizando o arquivo 'criar_banco' 
+    8 - Mexendo no arquivo routes para impedir que qualquer pessoa possa acessar o página de perfil utilizando a importação e o decorador @login_required 
