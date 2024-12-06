@@ -34,4 +34,12 @@ AULA 7:
 
 AULA 08:
     -> Criação do Banco de Dados
-    
+    1 - Baixamos o SQLAlchemy no nosso ambiente virtual 
+    2 - Adicionamosb algumas coisas no nosso arquivo de init:
+        from flask_sqlalchemy import SQLAlchemy - importamos o alchemy
+        app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///comunidade.db" - comando utilizado para criar o banco de dados, nesse caso vai ser em SQLLite e o nome do arquivo é 'comunidade.bd'
+        database = SQLAlchemy(app) - estamos chamando o aplicativo 
+    3 - Criamos um arquivo do lado de fora da pasta FakePinterest chamado 'criar_banco', esse arquivo não é necessário no projeto final, mas utilizamos ele agora para criar o bd e se necessário fazer algumas modificações
+    4 - A pasta 'instance' foi criada, é dentro dela que está o nosso bd
+    5 - Vamos criar as nossas tabelas dentro do arquivo 'models'
+    6 - Importamos as tabelas no 'criar_banco', apagamos o banco vazio e executamos o arquivo 'criar' de novo 
