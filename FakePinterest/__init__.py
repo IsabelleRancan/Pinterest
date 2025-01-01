@@ -15,4 +15,4 @@ bcrypt = Bcrypt(app)
 login_manager=LoginManager(app)
 login_manager.login_view = "homepage" #se o usuário não estiver logado, onde ele vai ser direcionado
 
-from FakePinterest import routes #essa importação sempre vai vir por último
+from FakePinterest import routes

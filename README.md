@@ -11,11 +11,11 @@ AULA 04:
 
 AULA 05:
     -> Rotas e páginas dinâmicas 
-    -> ENtendendo como criar vários perfis de usuário sem ter que criar um apágina de HTML para cada uma delas 
+    -> Entendendo como criar vários perfis de usuário sem ter que criar uma página de HTML para cada uma delas 
     -> Entedendo como passar links das páginas pelas funções e links de sites externos 
 
 AULA 06: 
-    -> Transformando a homepage em um arquivos base HTML para não precisar ficar reescrevendo várias vezes 
+    -> Transformando a homepage em um arquivo base HTML para não precisar ficar reescrevendo várias vezes 
     -> Usando estruturas em Python de bloco dinâmico para poder criar os blocos de conteúdo no HTML
 
 AULA 7:
@@ -28,7 +28,7 @@ AULA 7:
         |routes  -> contém todas as rotas do site
 
     -> Na main(projeto principal que está fora da pasta) ficou a importação do aplicativo já criado na pasta init e o debug da aplicação, ou seja, ele está executando o código
-    Essas são as alteração está o presente momento 
+    Essas são as alteraçoes até o presente momento 
 
     *Essa vai ser a estrutura padrão que todos os projetos que criarmos em Flask vão ter
 
@@ -54,7 +54,7 @@ AULA 09:
     5 - Apagar o banco de dados novamente 
     6 - Criando uma função que vai encontrar o usuário pelo seu id usando a importação UserMixin e o decorador @login_manager no arquivos models 
     7 - Criar o banco de dados novamente utilizando o arquivo 'criar_banco' 
-    8 - Mexendo no arquivo routes para impedir que qualquer pessoa possa acessar o página de perfil utilizando a importação e o decorador @login_required 
+    8 - Mexendo no arquivo 'routes' para impedir que qualquer pessoa possa acessar o página de perfil utilizando a importação e o decorador @login_required 
 
 AULA 10:
     -> Criando os formulários de login 
@@ -63,3 +63,7 @@ AULA 10:
     3 - Criação das classes de 'acessar conta' e 'criar conta':
         inserimos os campos com os seus tipos correspondentes e inserimos seus validaroes que já haviam sido importados no arquivo 
     4 - Fazemos uma validação para que apenas uma conta possa ser criada por email 
+
+AULA 11:
+    -> Implementando os formulários de login na 'Homepage'
+    
