@@ -43,3 +43,25 @@ AULA 08:
     4 - A pasta 'instance' foi criada, é dentro dela que está o nosso bd
     5 - Vamos criar as nossas tabelas dentro do arquivo 'models'
     6 - Importamos as tabelas no 'criar_banco', apagamos o banco vazio e executamos o arquivo 'criar' de novo 
+
+AULA 09:
+    -> Implementando um sistema de login e segurança
+    1 - instalando flask-login flask-bcrypt
+    2 - fazendo as importação necessárias no arquivo init 
+    3 - criando o arquivo chave aleatória e passando para o arquivo init 
+    4 - Fazendo a importação de usermixin no arquivo models
+    5 - Apagar o banco de dados novamente 
+    6 - Criando uma função que vai encontrar o usuário pelo seu id usando a importação UserMixin e o decorador @login_manager no arquivos models 
+    7 - Criar o banco de dados novamente utilizando o arquivo 'criar_banco' 
+    8 - Mexendo no arquivo routes para impedir que qualquer pessoa possa acessar o página de perfil utilizando a importação e o decorador @login_required 
+
+AULA 10:
+    -> Criando os formulários de login 
+    1 - Instalando mais algumas dependencias do Flask: pip install flask-wtf, pip install email_validator;
+    2 - Fazer a importação das dependencias instaladas no arquivo 'forms.py';
+    3 - Criação das classes de 'acessar conta' e 'criar conta':
+        inserimos os campos com os seus tipos correspondentes e inserimos seus validaroes que já haviam sido importados no arquivo 
+    4 - Fazemos uma validação para que apenas uma conta possa ser criada por email 
+
+AULA 11:
+    -> Implementando os formulários de login na 'Homepage'
