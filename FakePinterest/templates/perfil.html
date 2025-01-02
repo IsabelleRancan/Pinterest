@@ -6,9 +6,14 @@
 
 {% block body %}
 <body>
-    <h1>Perfil do usuário: {{ usuario }}</h1>
+    <h1>Perfil do usuário: {{ usuario.username }}</h1> <!--A variável usuário é o item da tabela usuário-->
 
         <a href="{{url_for('logout')}}">Sair</a> <!--sempre aspas duplas do lado de fora e aspas simples do lado de dentro-->
     <!--<a href="/">Sair</a> -> se o link for externo, tem que passar o HTTP antes do link, o link que passamos indica o link da homepage-->
+
+<!--Estamos criando uma condição em python dentro do HTML para ele exibir as fotos do usuário-->
+{% for foto in usuario.fotos %} <!--Como ele já está dentro dos sinais {% ele vai reconhecer as variáveis python-->
+<img src="">
+{% endfor %}
 </body>
 {% endblock %}

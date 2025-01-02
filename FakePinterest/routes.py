@@ -13,7 +13,7 @@ def homepage(): #a importação url_for permite pegar o link pelo nome da funç�
         usuario = Usuario.query.filter_by(email=form_login.email.data).first()
         if usuario and bcrypt.check_password_hash(usuario.senha, form_login.senha.data): #a segunda parte já retorna um booleano, por isso está no if
           login_user(usuario)  
-          return redirect(url_for("perfil", usuario=usuario.username))
+          return redirect(url_for("perfil", id_usuario=usuario.id))
     return render_template("homepage.html", form=form_login)
 
 @app.route("/criarconta", methods=["GET", "POST"])
@@ -27,13 +27,17 @@ def criar_conta():
         database.session.add(usuario) #adicionando usuario ao bd
         database.session.commit() #salvando essa alterações no BD
         login_user(usuario, remember=True) #fazendo o login do usuário e salvando o login nos coockies para ele n ter que logar sempre que trocar de página
-        return redirect(url_for("perfil", usuario=usuario.username)) #redirecionando a pessoa para a página perfil
+        return redirect(url_for("perfil", id_usuario=usuario.id)) #redirecionando a pessoa para a página perfil
     return render_template("criarconta.html", form=form_criarconta) #form é o nome que a variável vai ter no HTML
 
-@app.route("/perfil/<usuario>") #o nome que vai aparecer dentro do HTML é o que o usuário digitar na barra da URL
+@app.route("/perfil/<id_usuario>") #o nome que vai aparecer dentro do HTML é o que o usuário digitar na barra da URL
 @login_required
-def perfil(usuario):
-    return render_template("perfil.html", usuario=usuario)
+def perfil(id_usuario): #estamos passando o ID pq é uma informação única
+    if int(id_usuario) == int(current_user.id): #vai verificar se o usuário está vendo o próprio perfil ou não
+        return render_template("perfil.html", usuario=current_user)
+    else:
+        usuario = usuario.query.get(int(id_usuario))
+        return render_template("perfil.html", usuario=usuario)
 
 @app.route("/logout")
 @login_required

@@ -90,3 +90,10 @@ AULA 12:
     12 - Acessando novamnete o arquivi voutes e criando a página logout
     13 - Fazendo a importação de 'current_user' para poder deslogar - current_user significa o usuario que está logado
     14 - Quando vocês está logado, pode buscar qualquer perfil, quando não está ele vai redirecionar sempre para a página de home
+
+AULA 13:
+    -> Ajustando o perfil do usuário 
+    1 - Mexemos na função 'perfil' do arquivo "routes.py" 
+    2 - Verificamos se o usuário está vendo o próprio perfil ou não. Isso é importante porque se for o próprio perfil, ele vai conseguir editar as informações 
+    3 - Atualizamos o arquivo "perfil.html" para exibir os perfis corretamente 
+    4 - Criamos uma estrutura condicional python dentro do HTML para exibir as imagens do perfil 
