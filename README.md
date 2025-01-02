@@ -97,3 +97,9 @@ AULA 13:
     2 - Verificamos se o usuário está vendo o próprio perfil ou não. Isso é importante porque se for o próprio perfil, ele vai conseguir editar as informações 
     3 - Atualizamos o arquivo "perfil.html" para exibir os perfis corretamente 
     4 - Criamos uma estrutura condicional python dentro do HTML para exibir as imagens do perfil 
+
+AULA 14:
+    -> Organizando os arquivos estáticos do projeto
+    1 - Criação da pasta static com a imagem "default.png" 
+    2 - Passando o caminho da imagem para o arquivo "perfil.html"
+    3 - Criação de uma variável/configuração para definir que as fotos postadas pelo usuário vão ser salvas na pasta "static/fotos_posts"
