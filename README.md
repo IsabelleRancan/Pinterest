@@ -73,3 +73,20 @@ AULA 11:
     4 - Adicionamos ao arquivo homepage os espaços para acessar a conta 
     5 - Criamos o arquivo "criarconta.html"
     6 - Copiamos o HTML da "homepage" e adicionamos os compos restantes
+
+AULA 12:
+    -> Implementando funcionalidades no login e criar conta
+    1 - Acessamos o arquivo routes e passamos as informações necessárias para o usuário criar a conta
+    2 - Criamos uma trava de segurança para que a senha do usuário não fique salva no bd, para isso fizemos:
+    3 - Immportamos o bcrypt no arquivo routes
+    4 - Criamos uma variável senha para salvar a senha criptografada com o hash
+    5 - Importamos o banco de dados 
+    6 - Salvamos a variável usuário com todas as informações dele no banco: 
+    7 - Fazemos o ligin do usuário automáticamente
+    8 - redirecionamos para a página de perfil
+    9 - Criando o sistema de login na página home
+    10 - Criando o sistema de logout:
+    11 - Acessando o arquivo "pefil.html" e colocando o redirecionamento do botão para a página "logout"
+    12 - Acessando novamnete o arquivi voutes e criando a página logout
+    13 - Fazendo a importação de 'current_user' para poder deslogar - current_user significa o usuario que está logado
+    14 - Quando vocês está logado, pode buscar qualquer perfil, quando não está ele vai redirecionar sempre para a página de home
