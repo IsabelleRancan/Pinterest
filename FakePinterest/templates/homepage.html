@@ -12,6 +12,21 @@
 {% block body %}
 <body>
     <h1>Esta é a minha pagina home</h1>
+    {% block formulario %}
+    <form method="POST"> <!--esse formulário vai enviar informações, por isso o método post-->
+        {{ form.csrf_token }} <!--Trava de segurança contra ataques dentro do formulário OBRIGATÓRIO-->
+        
+        {{ form.email.label() }}
+        {{ form.email() }}
+
+        {{ form.senha.label() }}
+        {{ form.senha() }}
+   
+        {{ form.botao_confirmacao() }}
+        
+    </form>
+    {% endblock %}
+
 </body>
 {% endblock %}
 </html>

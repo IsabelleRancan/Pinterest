@@ -1,9 +1,14 @@
 # criar a estrutura do banco de dados 
 
-from FakePinterest import database
+from FakePinterest import database, login_manager
 from datetime import datetime
+from flask_login import UserMixin
 
-class Usuario(database.Model): #isso permite criar o bd em um formato que o bd entenda
+@login_manager.user_loader
+def load_usuario(id_usuario):
+    return Usuario.query.get(int(id_usuario)) #buscando o nome de usuário no bd, usando o get para retornar de acordo com o id
+
+class Usuario(database.Model, UserMixin): #isso permite criar o bd em um formato que o bd entenda
     id = database.Column(database.Integer, primary_key=True)
     username = database.Column(database.String, nullable=False)
     email = database.Column(database.String, nullable=False, unique=True)

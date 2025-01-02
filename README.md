@@ -62,6 +62,14 @@ AULA 10:
     3 - Criação das classes de 'acessar conta' e 'criar conta':
         inserimos os campos com os seus tipos correspondentes e inserimos seus validaroes que já haviam sido importados no arquivo 
     4 - Fazemos uma validação para que apenas uma conta possa ser criada por email 
+    5 - Quando vamos fazer uma busca por ID usamos o Get, quando é por outra informação usamos o FILTER
 
 AULA 11:
     -> Implementando os formulários de login na 'Homepage'
+    -> Vamos dividir a home page para ter o login dos usuarios
+    1 - Vamos importar os formulários que criamos para o arquivo routes
+    2 - Adicionamos os métodos GET e POST dentro do routes
+    3 - Criamos as variáveis que vão aparecer no HTML
+    4 - Adicionamos ao arquivo homepage os espaços para acessar a conta 
+    5 - Criamos o arquivo "criarconta.html"
+    6 - Copiamos o HTML da "homepage" e adicionamos os compos restantes
