@@ -6,17 +6,26 @@
 
 {% block body %}
 <body>
+
     <h1>Perfil do usuário: {{ usuario.username }}</h1> <!--A variável usuário é o item da tabela usuário-->
 
+
+{% if form %}
+<form method="POST" enctype="multipart/form-data">
+    {{ form.csrf_token }}
+    {{ form.foto() }}
+    {{ form.botao_confirmacao() }}
+
+</form>
+{% endif %}
         <a href="{{url_for('logout')}}">Sair</a> <!--sempre aspas duplas do lado de fora e aspas simples do lado de dentro-->
     <!--<a href="/">Sair</a> -> se o link for externo, tem que passar o HTTP antes do link, o link que passamos indica o link da homepage-->
 
-<!--Imagem padrão do usuário-->
-<img src="{{ url_for('static', filename='fotos_site/default.png') }}">
 
 <!--Estamos criando uma condição em python dentro do HTML para ele exibir as fotos do usuário-->
 {% for foto in usuario.fotos %} <!--Como ele já está dentro dos sinais, ele vai reconhecer as variáveis python-->
-
-{% endfor %}
+    <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}"> <!--Estamos exibindo a imagem que foi salva "foto.imagem" porque no arquivo "models" é uma instancia da classe foto-->
+    <!--usamos {}.format('variável') para fazer o html reconhecer que isso é uma variável e não texto-->
+    {% endfor %}
 </body>
 {% endblock %}

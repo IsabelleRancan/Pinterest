@@ -103,3 +103,14 @@ AULA 14:
     1 - Criação da pasta static com a imagem "default.png" 
     2 - Passando o caminho da imagem para o arquivo "perfil.html"
     3 - Criação de uma variável/configuração para definir que as fotos postadas pelo usuário vão ser salvas na pasta "static/fotos_posts"
+
+AULA 15:
+    -> Criando a funcionalidade de postar uma foto no perfil
+    1 - Vamos criar um novo formiulário no arquivo "forms.py" chamado "FormFoto"
+    2 - Retornamos o arquivo da foto no arquivo "routes"
+    3 - Criamos as condições no arquivo "perfil.html" para exibir as imagens se existissem
+    4 - Voltando ao arquivo "routes" criamos uma variável para armazenar o arquivo
+    5 - criamos uma variável chamada nome_seguro para impedir que o usuário salve o arquivo com qualquer nome e quebre o nosso código
+    6 - Para garantir que o nome do arquivo será alterado, importamos duas bibliotecas: import os; from werkzeug.utils import secure_filename
+    7 - Salvamos o arquivo no banco de dados e na pasta do nosso projeto
+    8 - Alteramos o for para poder exibir as imagens enviadas pelo usuário e vimos como fazer o html reconhecer variáveis 
