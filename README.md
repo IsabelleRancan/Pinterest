@@ -114,3 +114,14 @@ AULA 15:
     6 - Para garantir que o nome do arquivo será alterado, importamos duas bibliotecas: import os; from werkzeug.utils import secure_filename
     7 - Salvamos o arquivo no banco de dados e na pasta do nosso projeto
     8 - Alteramos o for para poder exibir as imagens enviadas pelo usuário e vimos como fazer o html reconhecer variáveis 
+
+AULA 16:
+    -> Criar um feed do Pinterest
+    1 - Criamos um arquivo "feed.html" para podermos colocar uma barra de navegação nele
+    2 - Como a barra de navegação vai existir em algumas páginas e não em outras, criamos o arquivo "navbar.html" 
+    3 - Criamos uma rota para o feed no arquivo "routes"
+    4 - Definimos as páginas "feed" e "perfil" para podermos acessar na barra de navegação
+    5 - Fazemos uma busca no bd dentro do arquivo "routes" para o feed retornar as imagens existentes 
+    6 - Mudamos o botão "sair" e colocamos dentro da barra de navegação 
+    7 - Fazemos com que ao clicar na foto, podemos acessar o perfil do usuário que postou a imagem:
+    8 - Acessamos o arquivo "feed.html" e colocamos o link do perfil do usuário na foto 
