@@ -1,29 +1,63 @@
 {% extends "homepage.html" %}
 
-{% block titulo %} 
-    Perfil - {{ usuario }}
+{% block titulo %}
+Perfil - {{ usuario.username }} <!--Transformando o título de acordo com o nome do usuário; A variável usuário é o item da tabela usuário-->
 {% endblock %}
 
 {% block body %}
 <body>
-    {% include "navbar.html" %} <!--vai incluir a barra de navegação-->
+{% include "navbar.html" %} <!--vai incluir a barra de navegação-->
 
-    <h1>Perfil do usuário: {{ usuario.username }}</h1> <!--A variável usuário é o item da tabela usuário-->
-
+<div class="container">
 
 {% if form %}
-<form method="POST" enctype="multipart/form-data">
-    {{ form.csrf_token }}
-    {{ form.foto() }}
-    {{ form.botao_confirmacao() }}
 
-</form>
+
+      <form class="bloco-add-img" method="POST" enctype="multipart/form-data">
+          {{ form.csrf_token }}
+        <h2>{{ usuario.username }} - Enviar foto</h2>
+
+        <div class="bloco-arquivo">
+            <label for="foto" class="botao-arquivo">
+              Escolher arquivo
+                {{ form.foto(class="input-arquivo", id="foto") }}
+            </label>
+            <span id="imagem-arquivo" class=""></span>
+          </div>
+
+          {{ form.botao_confirmacao(class="botao-login") }}
+        </form>
+
+{% else %}
+<div class="bloco-add-img">
+    <h2>{{ usuario.username }} - Perfil</h2>
+</div>
 {% endif %}
 
-<!--Estamos criando uma condição em python dentro do HTML para ele exibir as fotos do usuário-->
+
+
+<div class="conteudo">
+    <!--Estamos criando uma condição em python dentro do HTML para ele exibir as fotos do usuário-->
     {% for foto in usuario.fotos %} <!--Como ele já está dentro dos sinais, ele vai reconhecer as variáveis python-->
-        <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}"> <!--Estamos exibindo a imagem que foi salva "foto.imagem" porque no arquivo "models" é uma instancia da classe foto-->
-        <!--usamos {}.format('variável') para fazer o html reconhecer que isso é uma variável e não texto-->
-        {% endfor %}
-</body>
-{% endblock %}
+        <div class="bloco-imagem">
+          <img src="{{ url_for('static', filename='fotos_posts/{}'.format(foto.imagem)) }}" /><!--Estamos exibindo a imagem que foi salva "foto.imagem" porque no arquivo "models" é uma instancia da classe foto-->
+          <!--usamos {}.format('variável') para fazer o html reconhecer que isso é uma variável e não texto-->
+        </div>
+    {% endfor %}
+        </div>
+    
+    </div>
+    
+      <script>
+          let input = document.getElementById("foto");
+          let imagemArquivo = document.getElementById("imagem-arquivo");
+    
+          input.addEventListener("change", () => {
+            let inputImagem = document.querySelector("input[type=file]").files[0];
+    
+            imagemArquivo.classList.add("visivel");
+            imagemArquivo.innerText = inputImagem.name;
+          });
+        </script>
+    </body>
+    {% endblock %}

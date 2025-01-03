@@ -50,7 +50,7 @@ def perfil(id_usuario): #estamos passando o ID pq é uma informação única
             database.session.commit()
         return render_template("perfil.html", usuario=current_user, form=form_foto)
     else:
-        usuario = usuario.query.get(int(id_usuario))
+        usuario = Usuario.query.get(int(id_usuario))
         return render_template("perfil.html", usuario=usuario, form=None)
 
 @app.route("/logout")

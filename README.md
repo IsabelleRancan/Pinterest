@@ -133,3 +133,16 @@ AULA 17:
     3 - Acessamos o HTML disponibilizado pelo desenvolvedor frontend, copiamos o código ao nosso e fizemos a integração
     4 - Adicionamos todas as nossas variáveis e funcionalidades lá dentro, substituindo os imputs e botões pelas nossas funções
     5 - A página de HomePage foi finalizada
+
+AULA 18:
+    -> Estilização das páginas restantes 
+    1 - Estilizamos a página "criar_conta.html"
+    2 - Dessa vez foi apenas copiar todo o campo de formulário já estilizado da página "home"
+    3 - Adicionar os campos que estavam faltando e trocar o link final
+    4 - Agora mexemos noarquivo "navbar.html"
+    5 - Pegamos a barra de navegação que estava no feed e colocamos sozinha no arquivo "navbar.html" 
+    6 - Acessamos o arquivo feed e fazemos as alterações necessárias
+    7 - Colocamos o for dentro da div que organiza as imagens 
+    8 - Fazemos as alterações necessárias na página "perfil.html" 
+    9 - Crio um novo perfil para salvar mais imagens
+    Finalizamos a estilização do projeto
