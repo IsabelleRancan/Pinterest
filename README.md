@@ -125,3 +125,11 @@ AULA 16:
     6 - Mudamos o botão "sair" e colocamos dentro da barra de navegação 
     7 - Fazemos com que ao clicar na foto, podemos acessar o perfil do usuário que postou a imagem:
     8 - Acessamos o arquivo "feed.html" e colocamos o link do perfil do usuário na foto 
+
+AULA 17:
+    -> Ajustes finais e estilização 
+    1 - Vamos adicionar os botões de 'Fazer Login' e 'Acessar conta' nas páginas de "homepage" e "criar conta"
+    2 - Vamos editar e fazer todas as estilizações a partir da "homepage.html" que é a página que contém todo o código HTML original
+    3 - Acessamos o HTML disponibilizado pelo desenvolvedor frontend, copiamos o código ao nosso e fizemos a integração
+    4 - Adicionamos todas as nossas variáveis e funcionalidades lá dentro, substituindo os imputs e botões pelas nossas funções
+    5 - A página de HomePage foi finalizada
